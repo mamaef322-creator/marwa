@@ -1,0 +1,305 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#35102f">
+<meta name="description" content="A special message full of love and wishes for Maroua.">
+<title>The Best Maroua ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 24px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #170b2e, #531747, #a83265);
+    overflow-x: hidden;
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(#ffd4e7 1px, transparent 1px);
+    background-size: 65px 65px, 100px 100px;
+    animation: sparkle 4s infinite alternate;
+}
+
+.card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    padding: clamp(22px, 5vw, 40px);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 25px;
+    background: rgba(255,255,255,.10);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 0 40px rgba(255,105,180,.25);
+    animation: appear 1.2s ease;
+}
+
+.heart {
+    color: #ff8dbb;
+    font-size: clamp(32px, 8vw, 45px);
+    margin-bottom: 12px;
+    animation: heartbeat 1.2s infinite;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 10vw, 4.7rem);
+    line-height: 1.12;
+    margin-bottom: 24px;
+    overflow-wrap: break-word;
+    background: linear-gradient(90deg, #fff, #ffb5d5, #fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: glow 2s infinite alternate;
+}
+
+#musicBtn {
+    display: inline-block;
+    max-width: 100%;
+    padding: 14px 22px;
+    margin: 0 auto 28px;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 35px;
+    background: linear-gradient(90deg, #ff6fae, #ffd0e4);
+    color: #39102d;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,105,180,.25);
+    transition: transform .25s, box-shadow .25s;
+    touch-action: manipulation;
+}
+
+#musicBtn:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 25px #ff8dbb;
+}
+
+#musicBtn:active {
+    transform: scale(.97);
+}
+
+h2 {
+    color: #ffd1e5;
+    font-size: clamp(1.15rem, 4.5vw, 1.5rem);
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+p {
+    font-size: clamp(.95rem, 3.5vw, 1.05rem);
+    line-height: 1.9;
+    margin: 16px 0;
+    color: #fff0f6;
+    overflow-wrap: break-word;
+}
+
+.divider {
+    width: 75px;
+    height: 2px;
+    background: #ff9ac6;
+    margin: 23px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 12px #ff69a9;
+}
+
+.signature {
+    color: #ffb5d5;
+    font-style: italic;
+    margin-top: 24px;
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -40px;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+    z-index: 1;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.17); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 8px #ff9ac6; }
+    to { text-shadow: 0 0 24px #ff69a9; }
+}
+
+@keyframes sparkle {
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
+        align-items: flex-start;
+    }
+
+    .card {
+        margin: 10px auto;
+        padding: 26px 17px;
+        border-radius: 21px;
+    }
+
+    h1 {
+        font-size: clamp(2.5rem, 12vw, 3.5rem);
+    }
+
+    #musicBtn {
+        padding: 13px 19px;
+        font-size: 15px;
+    }
+
+    p {
+        line-height: 1.8;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<main class="card">
+
+    <div class="heart">♥</div>
+
+    <h1>THE BEST<br>MAROUA</h1>
+
+    <!-- Music button stays directly below the title -->
+    <button id="musicBtn" type="button">
+        ▶ Play Our Music 🎵
+    </button>
+
+    <audio id="music" src="./song.mp3" loop preload="none"></audio>
+
+    <h2>To the sweetest girl in my life 🌷</h2>
+
+    <div class="divider"></div>
+
+    <p>
+        My dearest Maroua, ❤️<br>
+        I pray with all my heart that you get well soon.
+        May every pain disappear, may your heart feel peaceful,
+        and may happiness always find its way to you.
+    </p>
+
+    <p>
+        You deserve all the beautiful things in this world.
+        I hope you always stay healthy, keep your beautiful
+        smile, and never lose the light that makes you special.
+    </p>
+
+    <p>
+        May God protect you, heal you, and fill your days
+        with love, comfort, and endless reasons to smile.
+        Please take good care of yourself.
+        You deserve the very best. 💗
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="signature">
+        With all my respect, care, and love — always. ❤️
+    </p>
+
+</main>
+
+<script>
+const music = document.getElementById("music");
+const button = document.getElementById("musicBtn");
+
+button.addEventListener("click", async () => {
+    if (music.paused) {
+        try {
+            await music.play();
+            button.textContent = "❚❚ Pause Our Music 🎵";
+        } catch (error) {
+            alert("Please make sure song.mp3 is in the same folder as index.html.");
+        }
+    } else {
+        music.pause();
+        button.textContent = "▶ Play Our Music 🎵";
+    }
+});
+
+music.addEventListener("play", () => {
+    button.textContent = "❚❚ Pause Our Music 🎵";
+});
+
+music.addEventListener("pause", () => {
+    button.textContent = "▶ Play Our Music 🎵";
+});
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "floating-heart";
+
+    const symbols = ["♥", "♡", "💗", "✨"];
+    heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (16 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 9500);
+}
+
+setInterval(createHeart, 800);
+</script>
+
+</body>
+</html>
+```
